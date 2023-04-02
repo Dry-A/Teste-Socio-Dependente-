@@ -1,12 +1,24 @@
-<h3> Detalhes do Associado</h3>
-<div>
-    <div>
-        <label> <b> id: </b></label> {{dependente.id}}
-    </div>
-    <div>
-        <label> <b> Nome Completo: </b></label> {{dependente.nome}}
-    </div>
-    <div>
-        <label> <b> Idade: </b></label> {{dependente.idade}}
-    </div>
+    <br>
+    <h1>Detalhes do Dependete com nome : {{dependente.nome}}</h1>
+    
+    <table class = "table table-striped">
+    
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nome Completo</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> {{dependente.id}} </td>
+                <td> {{dependente.nome}} </td>
+                <td> {{dependente.idade}} </td>
+            </tr>
+        </tbody>
+    
+    </table>
+    
+
     

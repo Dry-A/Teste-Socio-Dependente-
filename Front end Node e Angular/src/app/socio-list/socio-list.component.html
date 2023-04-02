@@ -1,9 +1,12 @@
+<br>
+
 <div class = "row">
-    <h2> Tabela de Associados</h2>
+    <h2>Associados</h2>
     <router-outlet></router-outlet>
+    
 </div>
 
-<table class="table table-striped">
+<table class = "table table-striped">
     <thead>
         <tr>
             <th> id</th>
@@ -18,17 +21,11 @@
             <td> {{ socio.id }} </td>
             <td> {{ socio.nome }} </td>
             <td> {{ socio.renda }} </td>
-            <td> {{ socio.ativo? "Ativa" : "Inativa"}} </td>
+            <td> {{ socio.ativo? "Ativo" : "Inativo"}} </td>
             <td>
-                <button (click)="socioDetails(socio.id)" class="btn btn-info">Ver Detalhes</button>
-                <button (click)="socioUpdate(socio.id)" class="btn btn-warning">Atualizar</button>
-                <button (click)="socioDelete(socio.id)" class="btn btn-danger">Deletar</button>
-            </td>
-
-            <td>
-                <ul>
-                    <li *ngFor="let dependente of socio.dependentes">{{dependente.nome}}</li>
-                </ul>
+                <button style="margin: 0.5em;" (click)="socioDetails(socio.id)" class="btn btn-info">Ver Detalhes</button>
+                <button style="margin: 0.5em;"  (click)="socioUpdate(socio.id)" class="btn btn-warning">Atualizar</button>
+                <button style="margin: 0.5em;"  (click)="socioDelete(socio.id)" class="btn btn-danger">Deletar</button>
             </td>
         </tr>
     </tbody>

@@ -1,15 +1,27 @@
-<h3> Detalhes do Associado</h3>
-<div>
-    <div>
-        <label> <b> id: </b></label> {{socio.id}}
-    </div>
-    <div>
-        <label> <b> Nome Completo: </b></label> {{socio.nome}}
-    </div>
-    <div>
-        <label> <b> Renda: </b></label> {{socio.renda}}
-    </div>
-    <div>
-        <label> <b> Ativo: </b></label> {{socio.ativo}}
-    </div>
-</div>
+<br>
+<h1>Detalhes Do Socio com nome : {{socio.nome}}</h1>
+
+<table class = "table table-striped">
+
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Nome Completo</th>
+            <th>Renda</th>
+            <th>Ativo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> {{socio.id}} </td>
+            <td> {{socio.nome}} </td>
+            <td> {{socio.renda}} </td>
+            <td>{{ socio.ativo? "Ativo" : "Inativo"}}</td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+
+

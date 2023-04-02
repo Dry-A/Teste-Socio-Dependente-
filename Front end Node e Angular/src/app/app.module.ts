@@ -38,7 +38,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent,
+  bootstrap: [
+    AppComponent,
     CreateSocioComponent,
     SocioListComponent,
     SocioService,

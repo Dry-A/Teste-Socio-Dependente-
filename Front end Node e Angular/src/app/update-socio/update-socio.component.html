@@ -19,9 +19,17 @@
                     </div>
 
                     <div class="form-group">
-                        <label> Ativo</label>
-                        <input type="text" class="form-control" id="ativo" [(ngModel)]="socio.ativo"
-                            name="ativo">
+                        <div class="form-check form-check-inline">
+                            <br>
+                            <input class="form-check-input" id="ativo" [(ngModel)]="socio.ativo" type="radio" name="inlineRadioOptions" value="true">
+                            <label class="form-check-label" id="ativo" [(ngModel)]="socio.ativo" for="ativo">Ativo</label>
+                        </div>
+        
+                        <div class="form-check form-check-inline">
+                            <br>
+                            <input class="form-check-input" id="ativo" [(ngModel)]="socio.ativo" type="radio" name="inlineRadioOptions" value="false">
+                            <label class="form-check-label" id="ativo" [(ngModel)]="socio.ativo" for="ativo">Inativo</label>
+                        </div>
                     </div>
 
                     <br />

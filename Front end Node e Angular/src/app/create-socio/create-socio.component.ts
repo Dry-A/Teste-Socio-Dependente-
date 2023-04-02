@@ -12,7 +12,9 @@ export class CreateSocioComponent implements OnInit {
 
   socio: Socio = new Socio() ;
 
-  constructor(private socioService: SocioService, private router:Router) { }
+  constructor(private socioService: SocioService, private router:Router) { 
+      
+  }
 
   ngOnInit(): void {
   }
