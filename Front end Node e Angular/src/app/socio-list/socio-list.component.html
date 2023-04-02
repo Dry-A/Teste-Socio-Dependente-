@@ -1,0 +1,35 @@
+<div class = "row">
+    <h2> Tabela de Associados</h2>
+    <router-outlet></router-outlet>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> id</th>
+            <th> Nome Completo </th>
+            <th> Renda R$</th>
+            <th> Ativo</th>
+            <th> Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let socio of socios" >
+            <td> {{ socio.id }} </td>
+            <td> {{ socio.nome }} </td>
+            <td> {{ socio.renda }} </td>
+            <td> {{ socio.ativo? "Ativa" : "Inativa"}} </td>
+            <td>
+                <button (click)="socioDetails(socio.id)" class="btn btn-info">Ver Detalhes</button>
+                <button (click)="socioUpdate(socio.id)" class="btn btn-warning">Atualizar</button>
+                <button (click)="socioDelete(socio.id)" class="btn btn-danger">Deletar</button>
+            </td>
+
+            <td>
+                <ul>
+                    <li *ngFor="let dependente of socio.dependentes">{{dependente.nome}}</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
