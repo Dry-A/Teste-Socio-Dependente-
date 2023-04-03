@@ -1,4 +1,6 @@
-# Teste Npi Sócios e Dependentes
+<h1 style="color: orange">Teste Npi Sócios e Dependentes</h1>
+
+![proejto npi](https://user-images.githubusercontent.com/112403510/229511951-db7b8df0-1df1-4972-ad67-f2be60b574c0.gif)
 
 ## Tecnologias usadas:
 
@@ -33,6 +35,7 @@ Deverá conter os seguintes campos:
 ⦁ Nome, texto, mínimo de 5 caracteres e máximo de 50 caracteres, obrigatório
 ⦁ Renda, decimal, obrigatório, maior ou igual a zero
 ⦁ Ativo, booleano
+<br>
 <strong><em style="color: blue ">Cadastro de dependente:</em></strong>
 Deverá conter os seguintes campos:
 ⦁ Id, inteiro, auto incremento
@@ -44,18 +47,13 @@ Deverá conter os seguintes campos:
 - Para fazer as requisições POST,GET,PUT,DELETE utilize os aplicativos <strong style="color:red">Insomnia ou Postman.
 </strong>
 
-
-
-##### Métodos http - Crud :
-
 Com o código do backend <strong> em execução</strong> na sua IDE de preferência, abra seu app Insomnia ou Postman.
 
-utilize o endereço para o endpoint -> http://localhost/8080/socios, e para fazer as consultas para os dependentes basta alterar a palavra socios para dependentes.
+Utilize o endereço para o endpoint -> <http://localhost/8080/socios>, e se preferir fazer as consultas e requisições para os <strong>dependentes</strong> basta alterar para http://localhost/8080/dependentes.
 
-Com a opção <strong>Post </strong>selecionada, é possível persisitir os dados no SGBD:
+Com a opção <strong>Post </strong>selecionada, é possível persistir os dados no SGBD:
 
 ![alt text](https://i.imgur.com/bywcnqa.png)
-
 
 Aqui no método <strong>Get</strong> podemos listar <strong>todos</strong>, somente por <strong>id</strong>, e também por <strong>nome</strong>:
 
@@ -76,7 +74,7 @@ Deletar
 
 <h3 style="color: red">Configurando o Front end</h3>
 
-   - Acesse pelo terminal Windows a pasta Front End Node e Angular que se encontra no Projeto, 
+   - Acesse pelo terminal Windows a pasta Front End Node e Angular que se encontra no Projeto
  
     Digite os seguintes comandos:
    - npm install 
@@ -109,4 +107,4 @@ Deletar
      Atualizar Sócio:
    ![alt text](https://i.imgur.com/SPuk1Yd.png)
 
-
+![alt text](https://i.imgur.com/IuyOCmG.gif)
