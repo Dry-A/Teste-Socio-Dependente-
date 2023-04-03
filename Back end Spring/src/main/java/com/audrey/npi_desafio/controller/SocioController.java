@@ -27,6 +27,11 @@ public class SocioController {
     public ResponseEntity<Socio> getById(@PathVariable Long id) {
         return socioService.findSocioById(id);
     }
+
+    @GetMapping("/nome/{nome}")
+    public ResponseEntity<List<Socio>> getByNome(@PathVariable String nome){
+        return ResponseEntity.ok(socioRepository.findAllByNomeContainingIgnoreCase(nome));
+    }
     @PostMapping
     public Socio post(@Valid @RequestBody Socio socio) {
         return socioService.addSocio(socio);

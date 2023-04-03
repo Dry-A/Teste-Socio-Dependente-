@@ -1,5 +1,6 @@
 package com.audrey.npi_desafio.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
@@ -9,7 +10,6 @@ import lombok.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -33,9 +33,8 @@ public class Socio {
     @NotNull
     private boolean ativo;
 
-    @ManyToMany
-    @JoinTable(name = "socio_dependente",
-            joinColumns = @JoinColumn(name = "id_socio"),
-            inverseJoinColumns = @JoinColumn(name = "id_dependente"))
-    private List<Dependente> dependentes = new ArrayList<>();
+    @OneToMany(mappedBy = "socio", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("socio")
+    private List<Dependente> dependente;
+
 }

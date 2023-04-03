@@ -1,5 +1,6 @@
 package com.audrey.npi_desafio.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -32,6 +33,8 @@ public class Dependente {
     @Min(value = 0)
     private int idade;
 
-    @ManyToMany(mappedBy = "dependentes")
-    private List<Socio> socios = new ArrayList<>();
+    @ManyToOne
+    @JsonIgnoreProperties("dependente")
+    private Socio socio;
+
 }
