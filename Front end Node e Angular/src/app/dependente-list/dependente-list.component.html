@@ -10,7 +10,7 @@
             <th>id</th>
             <th>Nome Completo</th>
             <th>Idade</th>
-            <th>Ações</th>
+            <th>Opções</th>
         </tr>
     </thead>
     <tbody>
@@ -20,7 +20,7 @@
             <td> {{ dp.idade }} </td>
             <td>
                 <button (click) = "dependeteUpdate(dp.id)" class = "btn btn-info"> Atualizar</button>
-                <button (click) = "dependeteDetails(dp.id)" class = "btn btn-warning" style="margin-left: 10px"> Ver Detalhes</button>
+                <button (click) = "dependeteDetails(dp.id)" class = "btn btn-warning" style="margin-left: 10px"> Detalhes</button>
                 <button (click) = "dependeteDelete(dp.id)" class = "btn btn-danger"   style="margin-left: 10px"> Remover</button>
             </td>
         </tr>

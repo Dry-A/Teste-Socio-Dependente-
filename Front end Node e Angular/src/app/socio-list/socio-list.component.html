@@ -13,7 +13,7 @@
             <th> Nome Completo </th>
             <th> Renda R$</th>
             <th> Ativo</th>
-            <th> Ações</th>
+            <th> Opções</th>
         </tr>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
             <td> {{ socio.renda }} </td>
             <td> {{ socio.ativo? "Ativo" : "Inativo"}} </td>
             <td>
-                <button style="margin: 0.5em;" (click)="socioDetails(socio.id)" class="btn btn-info">Ver Detalhes</button>
+                <button style="margin: 0.5em;" (click)="socioDetails(socio.id)" class="btn btn-info">Detalhes</button>
                 <button style="margin: 0.5em;"  (click)="socioUpdate(socio.id)" class="btn btn-warning">Atualizar</button>
                 <button style="margin: 0.5em;"  (click)="socioDelete(socio.id)" class="btn btn-danger">Deletar</button>
             </td>

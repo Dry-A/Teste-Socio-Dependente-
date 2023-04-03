@@ -8,7 +8,7 @@ export class Socio {
     id : number; 
     nome : string;
     renda : number;
-    ativo: Boolean;
+    ativo: boolean;
     dependentes: Dependente[];
 
      constructor() {
